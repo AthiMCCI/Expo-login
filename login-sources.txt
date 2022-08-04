@@ -1,0 +1,181 @@
+import React, { Component } from 'react';
+import {
+  ImageBackground,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  BackgroundColor,
+  TouchableOpacity 
+} from 'react-native';
+
+
+export default class LoginView extends Component {
+  render() {
+  
+    return (
+     
+      <View style={styles.box}>
+      
+      <View style={styles.container}>
+
+ <Image source={require('mccilogo.jpg')} />
+  <Text> THE BETTER CONNECTION  </Text>
+
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={styles.inputs}
+              placeholder="Email"
+              keyboardType="email-address"
+            />
+          </View>
+
+          <View style={styles.inputContainer}>
+            <TextInput style={styles.inputs}
+             placeholder="Password" />
+          
+          </View>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.loginButton]}>
+            <Text style={styles.loginText}>Login</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.buttonContainer}>
+            <View style={styles.forgotpassword}>
+              <Text> Forgot password  </Text>
+            </View>
+              
+          </TouchableOpacity> 
+        </View>
+           
+
+
+        <TouchableOpacity style={styles.signup}>
+          <View style={styles.signup}>
+            <Text>  SignUp </Text>
+          </View>
+        </TouchableOpacity>
+
+        <Text> ----------------OR----------------</Text>
+         <Text>  Signin with your social media icon </Text>
+
+        <TouchableOpacity activeOpacity={0.5}>
+        <Image source={{ uri: 'https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png' }}
+        style={{
+          width: 90,
+          position: 'absolute',
+          flexDirection: 'right',
+          justifyContent: 'left',
+          alignItems: 'left',
+          padding:20,
+          resizeMode: "contain",
+          top: '1 %'
+          }} />
+          </TouchableOpacity>
+            
+              <TouchableOpacity activeOpacity={0.5}> 
+                <Image source={
+                  { uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1200px-Twitter-logo.svg.png' }}
+                  style={{
+    width: 180,
+    position: 'absolute',
+
+    flexDirection: 'right',
+    justifyContent: 'right',
+    alignItems: 'right',
+    padding:20,
+    resizeMode: "contain",
+    top: '3 %'
+                  }} />
+              </TouchableOpacity>
+
+              <TouchableOpacity activeOpacity={0.5} >
+                <Image source={
+                  { uri: 'https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA' }}
+                  style={{
+                     width: 20,
+    padding:20,
+    resizeMode: "contain",
+    top: '1 %'
+                  }} />
+              </TouchableOpacity>
+              
+              
+      </View>
+       
+    );
+    
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex:1,
+    justifyContent: 'space-between',
+    padding: 20,
+    margin: 10,
+    alignItems: 'center',
+    backgroundColor: '',
+
+  },
+  //workinginemailandpasswordbox
+  inputContainer: {
+    borderBottomColor: 'blue',
+    backgroundColor: 'white',
+    borderRadius: 1,
+    borderBottomWidth: 1,
+    width: 250,
+    height: 45,
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'right',
+  },
+  inputs: {
+    height: 45,
+    margincenter: 10,
+    borderBottomColor: 'blue',
+    flex: 1,
+  },
+
+  //itschangeintoboxtype
+  buttonContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+    width: 300,
+    
+  },
+  loginButton: {
+    backgroundColor: 'blue',
+  },
+  loginText: {
+    color: 'white',
+  },
+  forgotpassword: {
+    height: 70,
+    flexDirection: 'left',
+    justifyContent: 'left',
+    alignItems: 'left',
+    marginTop: 10,
+    width: 300,
+  },
+  box: {
+    height: 400,
+    justifyContent: 'left',
+    alignItems: 'center',
+    width: 800,
+    borderRadius: 30,
+  },
+  signup: {
+   height:30,
+    alignItems: 'center',
+    flexDirection: 'left',
+    justifyContent: 'left',
+    marginBottom:10,
+    width:300,
+  
+  },
+});
